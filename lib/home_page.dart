@@ -19,14 +19,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Container(),
+      ),
       appBar: AppBar(
-        title: const Text('Board'),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(Icons.arrow_back_ios),
-        ),
+        title: const Text('Home'),
+        leading: null,
       ),
       body: pages[currentPage],
       bottomNavigationBar: NavigationBar(

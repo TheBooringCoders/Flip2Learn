@@ -22,7 +22,7 @@ class _BoardPageState extends State<BoardPage> {
               color: Colors.white,
               child: const Center(
                   child: Text(
-                'Albert Einstein',
+                'Norsk',
                 textScaleFactor: 2,
                 style: TextStyle(fontWeight: FontWeight.bold),
               )),
