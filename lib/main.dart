@@ -32,17 +32,22 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: ElevatedButton(
-        style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-        ),
-        onPressed: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (BuildContext context) {
-            return const HomePage();
-          }));
-        },
-        child: const Text('Start Playing'),
+      backgroundColor: Colors.transparent,
+      extendBodyBehindAppBar: true,
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('images/firstPage.png'), fit: BoxFit.cover)),
+        child: Center(
+            child: Padding(
+          padding: const EdgeInsets.only(top: 150),
+          child: Image.asset(
+            'images/text.png', // Replace 'your_image.png' with the actual image asset path
+            width: 200.0, // Adjust the width as needed
+            height: 200.0, // Adjust the height as needed
+          ),
+        )),
       ),
     );
   }
