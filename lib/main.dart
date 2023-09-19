@@ -49,6 +49,28 @@ class _RootPageState extends State<RootPage> {
           ),
         )),
       ),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 20),
+        child: ElevatedButton(
+          style: ButtonStyle(
+            padding: MaterialStateProperty.all<EdgeInsets>(
+              const EdgeInsets.only(left: 95, right: 95, top: 20, bottom: 20),
+            ),
+            foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+          ),
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (BuildContext context) {
+              return const HomePage();
+            }));
+          },
+          child: const Text(
+            'Start Playing',
+            style: TextStyle(fontSize: 18),
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
