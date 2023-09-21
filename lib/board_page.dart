@@ -11,6 +11,7 @@ class BoardPage extends StatefulWidget {
 
 class _BoardPageState extends State<BoardPage> {
   int currentIndex = 0;
+  bool isBack = false;
   final List<Map<String, String>> dict = [
     {"Norsk": "norwegian"},
     {"Jeg Heter": "My Name is"},
@@ -28,6 +29,10 @@ class _BoardPageState extends State<BoardPage> {
     await flutterTts.speak(dict[currentIndex].keys.first);
   }
 
+  String getValue() {
+    return dict[currentIndex].values.first;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -40,18 +45,31 @@ class _BoardPageState extends State<BoardPage> {
         ]),
         const SizedBox(height: 25),
         Card(
-            margin: const EdgeInsets.only(left: 30, right: 30),
-            child: Container(
-              width: 400,
-              height: 200,
-              color: Colors.white,
-              child: Center(
-                  child: Text(
-                dict[currentIndex].keys.first,
-                textScaleFactor: 2,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              )),
-            )),
+          margin: const EdgeInsets.only(left: 30, right: 30),
+          child: isBack
+              ? Container(
+                  width: 400,
+                  height: 200,
+                  color: Colors.white,
+                  child: Center(
+                      child: Text(
+                    getValue(),
+                    textScaleFactor: 2,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  )),
+                )
+              : Container(
+                  width: 400,
+                  height: 200,
+                  color: Colors.white,
+                  child: Center(
+                      child: Text(
+                    dict[currentIndex].keys.first,
+                    textScaleFactor: 2,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  )),
+                ),
+        ),
         const SizedBox(height: 25),
         IconButton(
           onPressed: _speak,
@@ -66,7 +84,8 @@ class _BoardPageState extends State<BoardPage> {
               minimumSize: MaterialStateProperty.all(const Size(325, 50)),
             ),
             onPressed: () {
-              //debugPrint('I Know this');
+              // var val = getValue();
+              // debugPrint(val);
               setState(() {
                 currentIndex++;
                 if (currentIndex >= dict.length) {
