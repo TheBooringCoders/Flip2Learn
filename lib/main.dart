@@ -53,11 +53,12 @@ class _RootPageState extends State<RootPage> {
         padding: const EdgeInsets.only(bottom: 20),
         child: ElevatedButton(
           style: ButtonStyle(
-            padding: MaterialStateProperty.all<EdgeInsets>(
-              const EdgeInsets.only(left: 95, right: 95, top: 20, bottom: 20),
-            ),
-            foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-          ),
+              padding: MaterialStateProperty.all<EdgeInsets>(
+                const EdgeInsets.only(left: 95, right: 95, top: 20, bottom: 20),
+              ),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+              backgroundColor:
+                  MaterialStateProperty.all<Color>(primary.shade500)),
           onPressed: () {
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (BuildContext context) {
