@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "NO": "abessinsk",
+        "EN": "Abyssinian"
+    },
+    {
+        "id": 2,
+        "NO": "abkhasisk",
+        "EN": "Abkhazian"
+    },
+    {
+        "id": 3,
+        "NO": "abnorm",
+        "EN": "abnormal"
+    },
+    {
+        "id": 4,
+        "NO": "absolutistisk",
+        "EN": "absolutist"
+    },
+    {
+        "id": 5,
+        "NO": "absolutt",
+        "EN": "absolute"
+    },
+    {
+        "id": 6,
+        "NO": "abstrakt",
+        "EN": "abstract"
+    },
+    {
+        "id": 7,
+        "NO": "absurd",
+        "EN": "absurd"
+    },
+    {
+        "id": 8,
+        "NO": "adekvat",
+        "EN": "adequate"
+    },
+    {
+        "id": 9,
+        "NO": "administrativ",
+        "EN": "administrative"
+    },
+    {
+        "id": 10,
+        "NO": "aerodynamisk",
+        "EN": "aerodynamic"
+    }
+]
